@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation with Forms</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 id="title" class="text-center mb-4">Form Submission</h1>
+      <p id="description" class="text-center mb-4">
+        Please fill the below form and submit your details.
+      </p>
+      <form id="form">
+        <div class="form-row mb-4">
+          <div class="form-group col-md-6">
+            <label for="first-name">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="first-name"
+              placeholder="Enter your first name"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="last-name">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="last-name"
+              placeholder="Enter your last name"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group mb-4">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-row mb-4">
+          <div class="form-group col-md-8">
+            <label for="address">Address</label>
+            <textarea
+              class="form-control"
+              id="address"
+              rows="3"
+              placeholder="Enter your address"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="pincode">Pincode</label>
+            <input
+              type="text"
+              class="form-control"
+              id="pincode"
+              placeholder="Enter your pincode"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group mb-4">
+          <label>Gender</label>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              id="gender-male"
+              value="Male"
+              required
+            />
+            <label class="form-check-label" for="gender-male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              id="gender-female"
+              value="Female"
+              required
+            />
+            <label class="form-check-label" for="gender-female">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="gender"
+              id="gender-other"
+              value="Other"
+              required
+            />
+            <label class="form-check-label" for="gender-other">Other</label>
+          </div>
+        </div>
+        <div class="form-group mb-4">
+          <label>Choice of Food (Select at least 2)</label>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="food1"
+              value="Pizza"
+            />
+            <label class="form-check-label" for="food1">Pizza</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="food2"
+              value="Burger"
+            />
+            <label class="form-check-label" for="food2">Burger</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="food3"
+              value="Pasta"
+            />
+            <label class="form-check-label" for="food3">Pasta</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="food4"
+              value="Salad"
+            />
+            <label class="form-check-label" for="food4">Salad</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="food5"
+              value="Sushi"
+            />
+            <label class="form-check-label" for="food5">Sushi</label>
+          </div>
+        </div>
+        <div class="form-row mb-4">
+          <div class="form-group col-md-6">
+            <label for="state">State</label>
+            <input
+              type="text"
+              class="form-control"
+              id="state"
+              placeholder="Enter your state"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="country">Country</label>
+            <input
+              type="text"
+              class="form-control"
+              id="country"
+              placeholder="Enter your country"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="submit">
+          Submit
+        </button>
+      </form>
+
+      <h2 class="mt-5">Submitted Data</h2>
+      <table class="table table-bordered table-responsive mt-3">
+        <thead class="thead-dark">
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Pincode</th>
+            <th>Gender</th>
+            <th>Food</th>
+            <th>State</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody id="dataTable">
+          <!-- Data will be appended here -->
+        </tbody>
+      </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+  </body>
+</html>
