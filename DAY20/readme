@@ -1,0 +1,28 @@
+Three API Tasks using Promises:
+
+1. Cat Images Viewer (Cat API)
+   Description:
+   Fetches and displays 10 random cat images.
+   Technologies Used: HTML, CSS, BOOTSTARP, JAVASCRPIT.
+   API Information:
+   API: The Cat API
+   URL: https://api.thecatapi.com/v1/images/search?limit=20
+   Data: Random cat images.
+
+2. Country Data Viewer (REST Countries API)
+   Description:
+   Fetches and displays all countries information like flags, country names, population and region.
+   Technologies Used: HTML, CSS, BOOTSTARP, JAVASCRPIT.
+   API Information:
+   API: REST Countries API
+   URL: https://restcountries.com/v3.1/all
+   Data: Country information which includes flags, names, populations, and regions.
+
+3. Random Jokes Viewer (Official Joke API)
+   Description:
+   Fetches and displays 10 random jokes.
+   Technologies Used: HTML, CSS, BOOTSTARP, JAVASCRPIT.
+   API Information:
+   API: Official Joke API
+   URL: https://official-joke-api.appspot.com/random_ten
+   Data: Random jokes.
